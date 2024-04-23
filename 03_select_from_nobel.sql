@@ -59,13 +59,8 @@ WHERE
 -- • Thomas Woodrow Wilson
 -- • Jimmy Carter
 -- • Barack Obama
-SELECT
-    yr,
-    subject,
-    winner
-FROM
-    nobel
-WHERE
+SELECT * FROM nobel
+ WHERE
     winner IN (
         'Theodore Roosevelt',
         'Thomas Woodrow Wilson',
@@ -80,7 +75,7 @@ SELECT
 FROM
     nobel
 WHERE
-    winner LIKE 'John%';
+    winner LIKE 'John_%';
 
 -- 8:
 -- Show the year, subject, and name of physics winners for 1980 together with the chemistry winners for 1984.
@@ -132,12 +127,7 @@ WHERE
 
 -- 11:
 -- Find ALL details OF the prize won BY PETER GRNBERG
-SELECT
-    yr,
-    subject,
-    winner
-FROM
-    nobel
+SELECT * FROM nobel
 WHERE
     winner = 'PETER GRÜNBERG';
 
